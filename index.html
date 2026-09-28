@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>K Arkitektur — Marko Koistinen Architects, Stockholm</title>
+<meta name="description" content="Marko Koistinen Architects is an internationally active architecture and design studio on Lidingö, Stockholm. Custom made living spaces — summerhouses, villas and extensions in Sweden and Finland. Featured on Grand Designs Sverige and MTV3.">
+<meta name="theme-color" content="#15140F">
+<link rel="canonical" href="https://karkitektur.se/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="K Arkitektur — Marko Koistinen Architects">
+<meta property="og:title" content="K Arkitektur — we master the art of custom made living spaces">
+<meta property="og:description" content="Contemporary Nordic architecture from Lidingö, Stockholm. Summerhouses, villas and extensions in Sweden and Finland.">
+<meta property="og:url" content="https://karkitektur.se/">
+<meta property="og:image" content="https://karkitektur.se/wp-content/uploads/2023/04/Utsikt.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2315140F'/%3E%3Cpath d='M11 8v16M21 8L11 16l10 8' fill='none' stroke='%23FBFAF6' stroke-width='2'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://karkitektur.se">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200;300;400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!--
+  DESIGN ────────────────────────────────────────────────────────────────────
+  Who: private clients in Sweden and Finland commissioning a summerhouse,
+  villa or extension — plus press and collaborators.
+
+  Diagnosis of the current WordPress theme: the entire body copy is set in
+  ALL CAPS, which is close to unreadable at length; the same text carries a
+  long list of typos; the works page splits into a picture list and a separate
+  plain-text index that repeat each other; and the studio's two strongest
+  credentials — Villa Glanbäcken on Grand Designs Sverige (TV4, 2023) and
+  Fisherman's Cabin on MTV3 and in Avotakka / Meidän Mökki — are compressed
+  into one small logo strip near the bottom. Television credibility in two
+  countries, shown at 20 pixels tall.
+
+  Idea: set the work the way the work is built. Marko's own descriptions keep
+  returning to symmetry and reduction — "a 2-sided symmetric exterior",
+  "3 symmetric double-opening glazed doors", "5 concrete walls", "simple,
+  almost ascetic". So the page is quiet, axial and material, and the
+  television features get a section of their own.
+
+  Colour: warm near-black #15140F (his black-stained fir) on warm paper, with
+  one accent: #6F5C3F, pixel-sampled from the raw fir cladding at Fisherman's
+  Cabin. Nothing else — the buildings are black timber, pale plywood,
+  limestone and Baltic grey.
+
+  Type: Spectral for everything read — a quiet, slightly austere screen serif
+  that suits ascetic timber far better than the marketing copy does. Archivo
+  only for the data layer: labels, metadata, years, sizes.
+
+  Motif: THE CENTRE AXIS. A short vertical tick on the centre line divides the
+  chapters, drawn from the symmetry he keeps describing.
+
+  Text: Marko's own words throughout, transcribed out of all caps into
+  sentence case, with the spelling corrected.
+  ───────────────────────────────────────────────────────────────────────────
+-->
+
+<style>
+:root{
+  --ink:#15140F;
+  --ink-2:#262319;
+  --paper:#FBFAF6;
+  --paper-2:#F1EFE7;
+  --fir:#6F5C3F;
+  --fir-lt:#C3AE8B;
+  --line:#E0DCD0;
+  --line-dk:rgba(251,250,246,.17);
+  --mute:#6C665A;
+  --mute-dk:rgba(251,250,246,.66);
+
+  --serif:'Spectral',Georgia,'Times New Roman',serif;
+  --sans:'Archivo',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;
+
+  --maxw:1480px;
+  --pad:clamp(18px,4vw,60px);
+  --ease:cubic-bezier(.22,.7,.2,1);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:17px;font-weight:300;line-height:1.66;letter-spacing:-.002em;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--fir);outline-offset:3px}
+h1,h2,h3,h4{margin:0;font-family:var(--serif);font-weight:300;letter-spacing:-.022em;line-height:1.1}
+p{margin:0 0 1.15em}p:last-child{margin-bottom:0}
+
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
+.skip{position:absolute;left:-9999px;top:0;z-index:999;background:var(--ink);color:var(--paper);padding:14px 20px}
+.skip:focus{left:0;top:0}
+
+/* ── data layer ── */
+.lbl{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);margin:0;line-height:1.8}
+.lbl-dk{color:var(--mute-dk)}
+.lbl-fir{color:var(--fir)}
+.dk .lbl-fir{color:var(--fir-lt)}
+.h1{font-size:clamp(2.2rem,5.6vw,4.6rem);font-weight:200;letter-spacing:-.035em;line-height:1.04}
+.h2{font-size:clamp(1.8rem,4vw,3.2rem);font-weight:200;letter-spacing:-.03em;line-height:1.08}
+.h3{font-size:clamp(1.3rem,2vw,1.8rem);letter-spacing:-.024em;line-height:1.16}
+.lead{font-size:clamp(1.15rem,1.65vw,1.5rem);font-weight:300;line-height:1.5;color:var(--ink-2);letter-spacing:-.014em}
+.dk .lead{color:rgba(251,250,246,.8)}
+.body{font-size:1.02rem;line-height:1.78;color:#403A30}
+.dk .body{color:rgba(251,250,246,.74)}
+
+.hz{height:1px;background:var(--line);border:0;margin:0}
+.dk .hz{background:var(--line-dk)}
+
+/* centre-axis divider — drawn from the symmetry he keeps describing */
+.axis{display:flex;justify-content:center;padding:clamp(34px,4.4vw,58px) 0}
+.axis i{display:block;width:1px;height:clamp(28px,3.4vw,46px);background:var(--line)}
+.dk .axis i{background:var(--line-dk)}
+
+.alink{display:inline-flex;align-items:center;gap:.8em;font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;padding-bottom:7px;border-bottom:1px solid currentColor;transition:gap .35s var(--ease)}
+.alink:hover{gap:1.4em}
+.btn{display:inline-flex;align-items:center;gap:.8em;padding:16px 28px;border:1px solid transparent;font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;transition:background-color .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease)}
+.btn-fir{background:var(--fir);color:var(--paper);border-color:var(--fir)}
+.btn-fir:hover{background:#55462F;border-color:#55462F}
+.btn-ink{border-color:rgba(21,20,15,.28);color:var(--ink)}
+.btn-ink:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn-light{border-color:rgba(251,250,246,.45);color:var(--paper)}
+.btn-light:hover{background:var(--paper);color:var(--ink)}
+
+/* ═══ NAV ═══ */
+.nav{position:fixed;inset:0 0 auto;z-index:200;color:var(--paper);border-bottom:1px solid transparent;transition:background-color .5s var(--ease),color .5s var(--ease),border-color .5s var(--ease)}
+.nav.solid{background:rgba(251,250,246,.94);backdrop-filter:saturate(180%) blur(16px);-webkit-backdrop-filter:saturate(180%) blur(16px);color:var(--ink);border-bottom-color:var(--line)}
+.nav-in{display:flex;align-items:center;gap:20px;height:72px;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad);transition:height .5s var(--ease)}
+.nav.solid .nav-in{height:60px}
+.brand{flex:none;display:flex;align-items:baseline;gap:12px;line-height:1}
+.brand b{font-family:var(--sans);font-size:.94rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap}
+.brand span{font-family:var(--sans);font-size:9.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;opacity:.72;display:none;border-left:1px solid currentColor;padding-left:12px}
+@media (min-width:760px){.brand span{display:block}}
+.nav-links{display:flex;align-items:center;gap:2px;margin-left:auto}
+.nav-links a{position:relative;padding:9px 14px;font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;opacity:.82;transition:opacity .25s}
+.nav-links a::after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.nav-links a:hover,.nav-links a.active{opacity:1}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.burger{display:none;margin-left:auto;width:42px;height:42px;align-items:center;justify-content:center;flex:none}
+.burger i{display:block;width:20px;height:1px;background:currentColor;position:relative}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:20px;height:1px;background:currentColor;transition:transform .4s var(--ease)}
+.burger i::before{top:-6px}.burger i::after{top:6px}
+.burger[aria-expanded="true"] i{background:transparent}
+.burger[aria-expanded="true"] i::before{transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] i::after{transform:translateY(-6px) rotate(-45deg)}
+@media (max-width:980px){.nav-links{display:none}.burger{display:flex}}
+.mnav{position:fixed;inset:0;z-index:190;background:var(--ink);color:var(--paper);display:flex;flex-direction:column;justify-content:center;padding:0 var(--pad);opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility .5s;overflow-y:auto}
+.mnav.open{opacity:1;visibility:visible}
+.mnav a{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:15px 0;border-bottom:1px solid var(--line-dk);font-size:clamp(1.6rem,7vw,2.3rem);font-weight:200;letter-spacing:-.03em}
+.mnav .m-meta{margin-top:30px;font-family:var(--sans);font-size:.84rem;color:var(--mute-dk);line-height:2}
+
+/* ═══ HERO ═══ */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;background:var(--ink);color:var(--paper);overflow:hidden}
+.hero-media{position:absolute;inset:0;overflow:hidden}
+.shot{position:absolute;inset:0;opacity:0;transition:opacity 2.2s var(--ease)}
+.shot.on{opacity:1}
+.shot img{width:100%;height:100%;object-fit:cover;transform:scale(1.1);transition:transform 10s linear}
+.shot.on img{transform:scale(1)}
+@media (prefers-reduced-motion:reduce){.shot img,.shot.on img{transform:none;transition:none}}
+.hero-media::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(180deg,rgba(21,20,15,.58) 0%,rgba(21,20,15,.2) 22%,rgba(21,20,15,.4) 44%,rgba(21,20,15,.76) 70%,rgba(21,20,15,.95) 100%),
+             linear-gradient(90deg,rgba(21,20,15,.44) 0%,rgba(21,20,15,0) 62%)}
+.hero-in{position:relative;z-index:4;flex:1;display:flex;flex-direction:column;justify-content:flex-end;width:100%;max-width:var(--maxw);margin-inline:auto;padding:0 var(--pad) clamp(68px,9vh,100px)}
+.hero-kick{display:flex;align-items:flex-start;gap:14px;margin-bottom:clamp(18px,2.4vw,28px);opacity:0;animation:up 1s .3s var(--ease) forwards}
+.hero-kick::before{content:"";width:40px;height:1px;background:var(--fir-lt);flex:none;margin-top:.9em}
+.hero-kick .lbl{color:var(--paper);opacity:.92}
+.hero h1{font-size:clamp(2.2rem,5.4vw,4.8rem);font-weight:200;letter-spacing:-.035em;line-height:1.08;max-width:19ch;opacity:0;animation:up 1.1s .42s var(--ease) forwards}
+.hero-line{margin-top:clamp(20px,2.8vw,32px);max-width:44ch;font-family:var(--sans);font-size:clamp(.95rem,1.2vw,1.1rem);font-weight:400;line-height:1.6;letter-spacing:-.006em;color:rgba(251,250,246,.86);opacity:0;animation:up 1.1s .56s var(--ease) forwards}
+.hero-foot{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:flex-end;justify-content:space-between;margin-top:clamp(26px,3.6vw,44px);padding-top:20px;border-top:1px solid var(--line-dk);opacity:0;animation:up 1.1s .7s var(--ease) forwards}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+@media (max-width:560px){.hero-cta{width:100%}.hero-cta .btn{flex:1 1 100%;justify-content:center}}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hero-kick,.hero h1,.hero-line,.hero-foot{animation:none;opacity:1}}
+.slate{display:flex;flex-direction:column;gap:12px;min-width:min(300px,80vw)}
+.slate-cap{font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(251,250,246,.78);line-height:2;min-height:4em;transition:opacity .5s}
+.slate-cap b{display:block;font-weight:600;color:var(--paper)}
+.ticks{display:flex;gap:6px}
+.tick{flex:1;height:1px;background:rgba(251,250,246,.26);position:relative;overflow:hidden;min-width:26px}
+.tick::after{content:"";position:absolute;inset:0;background:var(--paper);transform:scaleX(0);transform-origin:left}
+.tick.on::after{animation:fill 7s linear forwards}
+.tick.done::after{transform:scaleX(1)}
+@keyframes fill{to{transform:scaleX(1)}}
+.scroll{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);z-index:5;display:flex;flex-direction:column;align-items:center;gap:10px;font-family:var(--sans);font-size:9px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:rgba(251,250,246,.6)}
+.scroll i{width:1px;height:36px;background:rgba(251,250,246,.2);position:relative;overflow:hidden}
+.scroll i::after{content:"";position:absolute;left:0;right:0;top:-45%;height:45%;background:var(--paper);animation:drip 2.4s var(--ease) infinite}
+@keyframes drip{to{top:100%}}
+@media (max-width:760px){.scroll{display:none}}
+
+/* ═══ SECTIONS ═══ */
+.sec{padding:clamp(70px,9vw,140px) 0}
+.sec.tint{background:var(--paper-2)}
+.sec.dk{background:var(--ink);color:var(--paper)}
+.sec-top{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px;margin-bottom:clamp(34px,4.4vw,56px)}
+.sec-head{max-width:900px;margin-bottom:clamp(34px,4.4vw,56px)}
+.sec-head .h2{margin-bottom:.35em}
+
+/* ═══ MANIFESTO ═══ */
+/* Drafting-paper detail: decorative only, with no additional asset requests. */
+.drafting-sheet{position:relative;isolation:isolate;overflow:hidden;background-color:var(--paper)}
+.drafting-sheet::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:linear-gradient(rgba(111,92,63,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(111,92,63,.075) 1px,transparent 1px),linear-gradient(rgba(111,92,63,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(111,92,63,.035) 1px,transparent 1px);
+  background-size:120px 120px,120px 120px,24px 24px,24px 24px;background-position:-1px -1px;
+  -webkit-mask-image:linear-gradient(180deg,transparent,#000 14%,#000 82%,transparent);mask-image:linear-gradient(180deg,transparent,#000 14%,#000 82%,transparent)}
+.drafting-sheet>.wrap{position:relative;z-index:1}
+.drafting-sketch{position:absolute;z-index:0;left:max(0px,calc((100% - 1480px)/2));top:33%;width:min(53vw,730px);height:auto;color:var(--fir);opacity:.19;pointer-events:none;
+  -webkit-mask-image:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent);mask-image:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent)}
+.drafting-sheet .facts{background:rgba(251,250,246,.76)}
+@media(max-width:939px){.drafting-sketch{left:auto;right:-100px;top:32%;width:570px;max-width:none;opacity:.1}.drafting-sheet::before{opacity:.75}}
+@media(forced-colors:active){.drafting-sheet::before,.drafting-sketch{display:none}}
+
+.mf{display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,56px)}
+@media (min-width:940px){.mf{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(48px,7vw,104px)}}
+.facts{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line);margin-top:clamp(42px,5vw,76px)}
+@media (min-width:600px){.facts{grid-template-columns:1fr 1fr}}
+@media (min-width:1020px){.facts{grid-template-columns:repeat(4,1fr)}}
+.fact{padding:24px 20px 28px 0;border-bottom:1px solid var(--line)}
+@media (min-width:600px){.fact:nth-child(even){padding-left:20px;border-left:1px solid var(--line)}}
+@media (min-width:1020px){.fact{border-bottom:0}.fact+.fact{padding-left:20px;border-left:1px solid var(--line)}}
+.fact b{display:block;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:200;letter-spacing:-.035em;line-height:1.1;margin-bottom:11px}
+.fact span{display:block;font-family:var(--sans);font-size:.86rem;color:var(--mute);line-height:1.62}
+
+/* ═══ WORKS ═══ */
+.work{margin-bottom:clamp(58px,7.5vw,116px)}
+.work:last-child{margin-bottom:0}
+.work-img{position:relative;overflow:hidden;background:var(--paper-2);aspect-ratio:16/9;display:block}
+.work.tall .work-img{aspect-ratio:3/4}
+@media (max-width:760px){.work-img,.work.tall .work-img{aspect-ratio:4/3}}
+.work-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
+.work:hover .work-img img{transform:scale(1.035)}
+.cap{display:grid;grid-template-columns:1fr;gap:10px 30px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.dk .cap{border-top-color:var(--line-dk)}
+@media (min-width:760px){.cap{grid-template-columns:auto minmax(0,1.4fr) minmax(0,1.1fr) auto;align-items:baseline;gap:30px}}
+.cap-n{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.24em;color:var(--fir)}
+.dk .cap-n{color:var(--fir-lt)}
+.cap-t{font-size:clamp(1.25rem,2.1vw,1.8rem);font-weight:300;letter-spacing:-.024em;line-height:1.16}
+.cap-m{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.dk .cap-m{color:var(--mute-dk)}
+.work-txt{margin-top:18px;max-width:66ch}
+.credits{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:6px 30px}
+.credits span{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.pair{display:grid;grid-template-columns:1fr;gap:clamp(26px,3.4vw,50px)}
+@media (min-width:860px){.pair{grid-template-columns:1fr 1fr;align-items:start}.pair .work:nth-child(2){margin-top:clamp(48px,8vw,120px)}}
+.badge{display:inline-block;margin-bottom:15px;padding:8px 15px;border:1px solid var(--fir);color:var(--fir);font-family:var(--sans);font-size:9.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+
+/* ═══ WORKS INDEX ═══ */
+.reg{border-top:1px solid var(--line-dk)}
+.reg-yr{display:block;font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--fir-lt);padding:clamp(26px,3vw,38px) 0 12px}
+.reg-row{display:grid;grid-template-columns:1fr;gap:5px 28px;padding:clamp(14px,1.7vw,19px) 0;border-top:1px solid var(--line-dk);align-items:baseline}
+@media (min-width:820px){.reg-row{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,.9fr) auto;gap:30px}}
+.reg-n{font-size:clamp(1.05rem,1.7vw,1.35rem);font-weight:300;letter-spacing:-.022em;line-height:1.3;color:var(--paper)}
+.reg-m{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--mute-dk)}
+.reg-s{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--mute-dk);justify-self:start}
+@media (min-width:820px){.reg-s{justify-self:end;white-space:nowrap}}
+
+/* ═══ FEATURED IN ═══ */
+.feat{display:grid;grid-template-columns:1fr;gap:clamp(20px,2.4vw,28px)}
+@media (min-width:820px){.feat{grid-template-columns:repeat(3,1fr)}}
+.fcard{border-top:2px solid var(--fir);padding-top:22px}
+.dk .fcard{border-top-color:var(--fir-lt)}
+.fcard .yr{display:block;font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.24em;color:var(--fir);margin-bottom:12px}
+.dk .fcard .yr{color:var(--fir-lt)}
+.fcard h3{font-size:clamp(1.2rem,1.9vw,1.55rem);margin-bottom:.45em}
+.fcard p{font-family:var(--sans);font-size:.92rem;line-height:1.66;color:#403A30}
+.dk .fcard p{color:rgba(251,250,246,.72)}
+.strip{margin-top:clamp(40px,5vw,66px);padding-top:clamp(26px,3vw,38px);border-top:1px solid var(--line)}
+.dk .strip{border-top-color:var(--line-dk)}
+.strip img{width:100%;max-width:900px;height:auto}
+.dk .strip img{filter:invert(1) brightness(1.7)}
+
+/* ═══ STUDIO ═══ */
+.studio{display:grid;grid-template-columns:1fr;gap:clamp(30px,4vw,64px);align-items:start}
+@media (min-width:900px){.studio{grid-template-columns:minmax(0,.78fr) minmax(0,1fr);gap:clamp(44px,6vw,96px)}}
+.studio-img{overflow:hidden;background:var(--paper-2)}
+.studio-img img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.studio-cap{margin-top:13px;display:flex;justify-content:space-between;gap:14px}
+
+/* ═══ CONTACT ═══ */
+.ct{display:grid;grid-template-columns:1fr;gap:clamp(32px,4.4vw,62px)}
+@media (min-width:860px){.ct{grid-template-columns:1fr 1fr;gap:clamp(48px,6vw,100px)}}
+.ct-mail{display:inline-block;font-size:clamp(1.3rem,3vw,2.4rem);font-weight:200;letter-spacing:-.03em;line-height:1.2;border-bottom:1px solid var(--line-dk);padding-bottom:9px;transition:color .3s,border-color .3s;word-break:break-word}
+.ct-mail:hover{color:var(--fir-lt);border-color:var(--fir-lt)}
+.ct-row{padding:20px 0;border-top:1px solid var(--line-dk)}
+.ct-row dt{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--mute-dk);margin-bottom:8px}
+.ct-row dd{margin:0;font-size:1.06rem;font-weight:300;line-height:1.66}
+.ct-row dd a:hover{color:var(--fir-lt)}
+.legal{margin-top:clamp(34px,4vw,54px);padding-top:22px;border-top:1px solid var(--line-dk);font-family:var(--sans);font-size:.82rem;line-height:1.95;color:var(--mute-dk)}
+.legal a{border-bottom:1px solid rgba(251,250,246,.3)}
+.legal a:hover{color:var(--paper)}
+
+/* ═══ FOOTER ═══ */
+.foot{background:var(--ink);color:var(--mute-dk);padding:clamp(44px,5vw,66px) 0 clamp(24px,3vw,34px);border-top:1px solid var(--line-dk)}
+.foot-in{display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between}
+.foot .brand{color:var(--paper)}
+.foot-links{display:flex;flex-wrap:wrap;gap:16px 26px;font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase}
+.foot-links a:hover{color:var(--paper)}
+.foot-bottom{margin-top:clamp(26px,3vw,38px);padding-top:18px;border-top:1px solid var(--line-dk);display:flex;flex-wrap:wrap;gap:8px 26px;justify-content:space-between;font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase}
+
+/* ═══ REVEAL ═══ */
+.rv{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ═══ NAV ═══ -->
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="K Arkitektur — to top">
+      <b>K Arkitektur</b><span>Marko Koistinen Architects</span>
+    </a>
+    <nav class="nav-links" id="navlinks" aria-label="Main">
+      <a href="#works">Works</a>
+      <a href="#index">Index</a>
+      <a href="#featured">Featured in</a>
+      <a href="#studio">Studio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><i></i></button>
+  </div>
+</header>
+
+<div class="mnav" id="mnav">
+  <nav aria-label="Menu">
+    <a href="#works">Works <span class="lbl lbl-dk">01</span></a>
+    <a href="#index">Index <span class="lbl lbl-dk">02</span></a>
+    <a href="#featured">Featured in <span class="lbl lbl-dk">03</span></a>
+    <a href="#studio">Studio <span class="lbl lbl-dk">04</span></a>
+    <a href="#contact">Contact <span class="lbl lbl-dk">05</span></a>
+  </nav>
+  <div class="m-meta">
+    Torsvikssvängen 11, 181 34 Lidingö<br>
+    <a href="mailto:marko@karkitektur.se">marko@karkitektur.se</a><br>
+    <a href="tel:+46704768421">+46 (0)70 476 84 21</a>
+  </div>
+</div>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="hero">
+  <div class="hero-media">
+    <div class="shot on"><img src="https://karkitektur.se/wp-content/uploads/2023/04/Utsikt.jpg" alt="Fisherman's Cabin — the glazed doors open onto the Baltic shore" fetchpriority="high"></div>
+    <div class="shot"><img src="https://karkitektur.se/wp-content/uploads/2023/04/IMG_4384-1024x1016.jpg" alt="Project Koistinen — the black summerhouse in mist" loading="lazy"></div>
+    <div class="shot"><img src="https://karkitektur.se/wp-content/uploads/2024/05/1-768x1024.jpg" alt="Villa Glanbäcken — pale timber gables above Lake Glan" loading="lazy"></div>
+    <div class="shot"><img src="https://karkitektur.se/wp-content/uploads/2025/04/Page-1-2048x1558.jpg" alt="Project L — the souterrain house on the rocky cliff" loading="lazy"></div>
+  </div>
+
+  <div class="hero-in">
+    <p class="hero-kick"><span class="lbl">Marko Koistinen Architects · Lidingö, Stockholm</span></p>
+    <h1>We master the art of custom made living spaces.</h1>
+    <p class="hero-line">An internationally active architecture and design studio working in contemporary Nordic architecture — with a keen sensibility toward materials, detailing and craftsmanship.</p>
+    <div class="hero-foot">
+      <div class="hero-cta">
+        <a class="btn btn-fir" href="#works">Selected works</a>
+        <a class="btn btn-light" href="#contact">Start a project</a>
+      </div>
+      <div class="slate">
+        <p class="slate-cap" id="slateCap"><b>Fisherman's Cabin</b>Summerhouse · 30 m² · II, Finland · Built</p>
+        <div class="ticks" id="ticks" aria-hidden="true">
+          <span class="tick on"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll" aria-hidden="true"><i></i>Scroll</div>
+</section>
+
+<!-- ═══ MANIFESTO ═══ -->
+<section class="sec drafting-sheet" id="approach">
+  <!-- Abstract drafting motif, not a drawing of a commissioned project. -->
+  <svg class="drafting-sketch" viewBox="0 0 640 480" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="currentColor" stroke-width=".8">
+      <path d="M0 420 C120 404 220 432 330 418 S540 402 640 414 M0 440 C140 426 240 452 350 438 S560 424 640 436 M0 460 C130 448 250 470 360 458 S560 446 640 456"/>
+      <path d="M40 60 C150 50 250 70 330 58 S520 44 610 56 M65 70 V390 M575 70 V390 M70 75 H570" stroke-dasharray="3 5"/>
+      <circle cx="70" cy="30" r="14"/><circle cx="118" cy="22" r="10"/><circle cx="260" cy="26" r="16"/><circle cx="322" cy="18" r="11"/><circle cx="380" cy="30" r="14"/><circle cx="560" cy="24" r="15"/>
+      <path d="M90 90 H220 V250 H420 V90 H550 V360 H90 Z" stroke-width="3"/>
+      <path d="M90 200 H160 M200 200 H220 M420 210 H480 M520 210 H550 M300 250 V300" stroke-width="1.8"/>
+      <path d="M160 200 V240 A40 40 0 0 0 200 200 M480 210 V250 A40 40 0 0 0 520 210"/>
+      <path d="M130 357 H510 M130 363 H510 M240 247 H400 M240 253 H400"/>
+      <rect x="236" y="120" width="168" height="110" stroke-dasharray="2 4"/>
+      <rect x="110" y="110" width="80" height="60"/><rect x="440" y="110" width="90" height="70"/><rect x="330" y="275" width="190" height="22"/>
+      <path d="M90 382 H550 M90 375 V389 M550 375 V389 M85 387 L95 377 M545 387 L555 377 M68 90 V360 M61 90 H75 M61 360 H75 M63 95 L73 85 M63 365 L73 355"/>
+      <g transform="translate(600 110)"><circle r="17"/><path d="M0 -13 L6 9 L0 5 L-6 9 Z"/><path d="M0 -24 V-19 M0 19 V24 M-24 0 H-19 M19 0 H24"/></g>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div class="sec-top rv"><p class="lbl lbl-fir">01</p><hr class="hz"><p class="lbl">What we believe in</p></div>
+    <div class="mf">
+      <div class="rv">
+        <h2 class="h2" style="max-width:18ch">Architecture has a profound connection to its context, landscape and surroundings.</h2>
+      </div>
+      <div class="rv">
+        <p class="lead">At the heart of our architectural work lies a commitment to transforming bold ideas into timeless work, where every detail is meticulously crafted.</p>
+        <p class="body" style="margin-top:1.5em">We are recognised for our keen sensibility toward materials and detailing, as well as a true passion for craftsmanship in contemporary Nordic architecture and design.</p>
+        <p class="body">We believe the best architectural solutions emerge through close, transparent collaboration with clients and partners — brought to life by skilled and talented craftsmen.</p>
+        <p style="margin-top:1.9em"><a class="alink" href="#studio">About the studio</a></p>
+      </div>
+    </div>
+
+    <dl class="facts rv">
+      <div class="fact"><b>Lidingö</b><span>The studio is based on Lidingö, Stockholm, and works internationally.</span></div>
+      <div class="fact"><b>15</b><span>projects — summerhouses, villas, extensions and restorations in Sweden and Finland.</span></div>
+      <div class="fact"><b>FI &nbsp;/&nbsp; DK</b><span>Finnish heritage, trained at the Royal Danish Academy of Fine Arts.</span></div>
+      <div class="fact"><b>TV4 &nbsp;/&nbsp; MTV3</b><span>Work featured on national television in both Sweden and Finland.</span></div>
+    </dl>
+  </div>
+</section>
+
+<div class="axis" aria-hidden="true"><i></i></div>
+
+<!-- ═══ SELECTED WORKS ═══ -->
+<section class="sec tint" id="works">
+  <div class="wrap">
+    <div class="sec-top rv"><p class="lbl lbl-fir">02</p><hr class="hz"><p class="lbl">Selected works</p></div>
+
+    <article class="work rv">
+      <a class="work-img" href="https://karkitektur.se/projekt-l/">
+        <img src="https://karkitektur.se/wp-content/uploads/2025/04/Page-1-2048x1558.jpg" alt="Project L — limestone volume on a granite plinth above the archipelago" loading="lazy">
+      </a>
+      <div class="cap">
+        <span class="cap-n">01</span>
+        <h3 class="cap-t">Project L</h3>
+        <span class="cap-m">Summerhouse · Stockholm archipelago</span>
+        <span class="cap-m">400 m² · Under construction</span>
+      </div>
+      <div class="work-txt">
+        <p class="body">A summerhouse to be built on a beach plot in the Stockholm archipelago, offering magnificent sea views. The project is a souterrain house on a rocky cliff side, with the main spaces arranged around an inner courtyard overlooking the view.</p>
+        <p class="body">The exterior is composed of a volume with walls of stacked thin limestone slabs on a masonry granite plinth, with on-site cast light concrete details and contrasting dark wooden windows and doors. The interior is done in dark woodwork against light lime-plaster textured walls.</p>
+        <div class="credits">
+          <span>Lead architect — Marko Koistinen</span>
+          <span>Participating architect — Mattias Gavriél, Studio Gavriél</span>
+          <span>Structural engineering — Astadien Byggkonsult</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="pair">
+      <article class="work tall rv">
+        <a class="work-img" href="https://karkitektur.se/villa-andersson/">
+          <img src="https://karkitektur.se/wp-content/uploads/2024/05/1-768x1024.jpg" alt="Villa Glanbäcken — the extension above Lake Glan" loading="lazy">
+        </a>
+        <div class="cap">
+          <span class="cap-n">02</span>
+          <h3 class="cap-t">Villa Glanbäcken</h3>
+          <span class="cap-m">Villa extension · Norrköping</span>
+          <span class="cap-m">170 m²</span>
+        </div>
+        <div class="work-txt">
+          <p class="badge">Grand Designs Sverige · TV4 · Autumn 2023</p>
+          <p class="body">A larger villa extension to a small existing cabin on a high location overseeing Lake Glan in Norrköping. A simple monolithic volume with a dynamic inside, adding a double-height living room, a large kitchen and a top-floor master suite overlooking the lake.</p>
+          <p class="body">The house is composed of a raw fir panelled facade, a raw pine panelled roof, zinc metal details and large wooden windows. The inside is designed with sober grey and natural tones, and light, delicate wooden details in oak, fir and pine.</p>
+          <div class="credits">
+            <span>Lead architect — Marko Koistinen</span>
+            <span>Structural engineering — Astadien Byggkonsult</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="work tall rv">
+        <a class="work-img" href="https://karkitektur.se/project-koistinen/">
+          <img src="https://karkitektur.se/wp-content/uploads/2023/04/IMG_4384-1024x1016.jpg" alt="Project Koistinen — the black summerhouse in the Sörmland forest" loading="lazy">
+        </a>
+        <div class="cap">
+          <span class="cap-n">03</span>
+          <h3 class="cap-t">Project Koistinen</h3>
+          <span class="cap-m">Summerhouse · Gnesta</span>
+          <span class="cap-m">85 m² · Built</span>
+        </div>
+        <div class="work-txt">
+          <p class="body">A summerhouse built on a high location overseeing a lake in the heart of the Sörmland countryside. A simple black monolithic house with a double-height central living space organising the other rooms, and a two-sided symmetric exterior with large glazed sliding windows toward the lake.</p>
+          <p class="body">The wooden construction is placed on five concrete walls cast on the bedrock. The exterior is black fir cladding, a black metal roof and black painted exposed beams; the interior is light wood, contrasting the dark outside.</p>
+          <div class="credits"><span>Lead architect — Marko Koistinen</span></div>
+        </div>
+      </article>
+    </div>
+
+    <article class="work rv" style="margin-top:clamp(58px,7.5vw,116px)">
+      <a class="work-img" href="https://karkitektur.se/fishermans-cabin/">
+        <img src="https://karkitektur.se/wp-content/uploads/2023/04/Utsikt.jpg" alt="Fisherman's Cabin — doors opening to the northern Baltic" loading="lazy">
+      </a>
+      <div class="cap">
+        <span class="cap-n">04</span>
+        <h3 class="cap-t">Fisherman's Cabin</h3>
+        <span class="cap-m">Summerhouse · II, Finland</span>
+        <span class="cap-m">30 m² · Built</span>
+      </div>
+      <div class="work-txt">
+        <p class="badge">MTV3 · Spring 2022 &nbsp;·&nbsp; Avotakka / Meidän Mökki · 2021</p>
+        <p class="body">A small summerhouse built on a remote island, on a beach plot on the Finnish shore of the northern Baltic. A simple, almost ascetic design with a single pitched roof toward the water and three symmetric double-opening glazed doors organising both the interior space and the main facade.</p>
+        <p class="body">The exterior is raw fir panelled cladding, raw fir windows and a single pitched black metal roof. The driving challenges were a low budget, an off-grid location, spring flooding of the plot — and that every part of the project had to be drawn so it could be taken to the island by a small private boat during the short northern summer, or by snowmobile sled over the ice in winter.</p>
+        <div class="credits"><span>Lead architect — Marko Koistinen</span></div>
+      </div>
+    </article>
+
+    <div class="pair">
+      <article class="work tall rv">
+        <a class="work-img" href="https://karkitektur.se/selected-works/">
+          <img src="https://karkitektur.se/wp-content/uploads/2025/04/IMG_2396.jpg" alt="Project K — warm timber and stone interior" loading="lazy">
+        </a>
+        <div class="cap">
+          <span class="cap-n">05</span>
+          <h3 class="cap-t">Project K</h3>
+          <span class="cap-m">Summerhouse · Södermanland</span>
+          <span class="cap-m">80 m² · Building permission</span>
+        </div>
+      </article>
+
+      <article class="work tall rv">
+        <a class="work-img" href="https://karkitektur.se/selected-works/">
+          <img src="https://karkitektur.se/wp-content/uploads/2025/04/Enscape_2025-02-20-20-17-44-2048x1612.png" alt="Project S — villa on Lidingö" loading="lazy">
+        </a>
+        <div class="cap">
+          <span class="cap-n">06</span>
+          <h3 class="cap-t">Project S</h3>
+          <span class="cap-m">Villa · Lidingö, Stockholm</span>
+          <span class="cap-m">200 m² · Under construction</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WORKS INDEX ═══ -->
+<section class="sec dk" id="index">
+  <div class="wrap">
+    <div class="sec-top rv"><p class="lbl lbl-fir">03</p><hr class="hz"><p class="lbl lbl-dk">Works index</p></div>
+
+    <div class="reg rv">
+      <span class="reg-yr">2023 —</span>
+      <div class="reg-row"><h3 class="reg-n">Project L</h3><span class="reg-m">Summerhouse</span><span class="reg-m">Stockholm</span><span class="reg-s">Ongoing</span></div>
+      <div class="reg-row"><h3 class="reg-n">Project Hedqvist</h3><span class="reg-m">Garden house / sauna</span><span class="reg-m">Strängnäs</span><span class="reg-s">Ongoing</span></div>
+      <div class="reg-row"><h3 class="reg-n">Office</h3><span class="reg-m">Architecture office</span><span class="reg-m">Lidingö</span><span class="reg-s">Ongoing</span></div>
+      <div class="reg-row"><h3 class="reg-n">Project N</h3><span class="reg-m">Rooftop extension</span><span class="reg-m">Lidingö</span><span class="reg-s">Ongoing</span></div>
+      <div class="reg-row"><h3 class="reg-n">Cabin J</h3><span class="reg-m">Guesthouse</span><span class="reg-m">II, Finland</span><span class="reg-s">Ongoing</span></div>
+
+      <span class="reg-yr">2022 —</span>
+      <div class="reg-row"><h3 class="reg-n">Project Å</h3><span class="reg-m">Pool project</span><span class="reg-m">Bromma</span><span class="reg-s">Ongoing</span></div>
+      <div class="reg-row"><h3 class="reg-n">Project F</h3><span class="reg-m">Rooftop extension / garage</span><span class="reg-m">Bromma</span><span class="reg-s">Ongoing</span></div>
+
+      <span class="reg-yr">2021 —</span>
+      <div class="reg-row"><h3 class="reg-n">Villa Andersson</h3><span class="reg-m">Villa extension</span><span class="reg-m">Norrköping</span><span class="reg-s">Ongoing</span></div>
+      <div class="reg-row"><h3 class="reg-n">Villa Sandlycke</h3><span class="reg-m">Villa</span><span class="reg-m">Strängnäs</span><span class="reg-s">Unbuilt</span></div>
+      <div class="reg-row"><h3 class="reg-n">Project Kjällström</h3><span class="reg-m">Summerhouse + guesthouse</span><span class="reg-m">Väddö, Norrtälje</span><span class="reg-s">Ongoing</span></div>
+
+      <span class="reg-yr">2009 — 2020</span>
+      <div class="reg-row"><h3 class="reg-n">Project Koistinen</h3><span class="reg-m">Summerhouse</span><span class="reg-m">Gnesta</span><span class="reg-s">Built</span></div>
+      <div class="reg-row"><h3 class="reg-n">Fisherman's Cabin</h3><span class="reg-m">Summerhouse</span><span class="reg-m">II, Finland</span><span class="reg-s">Built</span></div>
+      <div class="reg-row"><h3 class="reg-n">Villa Kjällström</h3><span class="reg-m">Villa restoration</span><span class="reg-m">Bromma</span><span class="reg-s">Built</span></div>
+      <div class="reg-row"><h3 class="reg-n">Villa Sunby</h3><span class="reg-m">Villa</span><span class="reg-m">Eskilstuna</span><span class="reg-s">Proposal</span></div>
+      <div class="reg-row"><h3 class="reg-n">Villa Koistinen</h3><span class="reg-m">Villa</span><span class="reg-m">Strängnäs</span><span class="reg-s">Proposal</span></div>
+    </div>
+
+    <p class="lbl lbl-dk rv" style="margin-top:clamp(28px,3.4vw,44px)">For more information on certain projects, or other requests, please get in touch.</p>
+    <p style="margin-top:1.6em" class="rv"><a class="btn btn-light" href="#contact">Contact the studio</a></p>
+  </div>
+</section>
+
+<!-- ═══ FEATURED IN ═══ -->
+<section class="sec" id="featured">
+  <div class="wrap">
+    <div class="sec-top rv"><p class="lbl lbl-fir">04</p><hr class="hz"><p class="lbl">Featured in</p></div>
+    <div class="sec-head rv">
+      <h2 class="h2">Two houses, two countries,<br>on national television.</h2>
+    </div>
+
+    <div class="feat">
+      <div class="fcard rv">
+        <span class="yr">Autumn 2023</span>
+        <h3>Grand Designs Sverige</h3>
+        <p>TV4. Villa Glanbäcken, the extension above Lake Glan in Norrköping, followed through construction.</p>
+      </div>
+      <div class="fcard rv">
+        <span class="yr">Spring 2022</span>
+        <h3>Suomen kauneimmat kesämökit</h3>
+        <p>MTV3, Finland. Fisherman's Cabin — the 30 m² off-grid summerhouse on the northern Baltic shore.</p>
+      </div>
+      <div class="fcard rv">
+        <span class="yr">2021</span>
+        <h3>Avotakka / Meidän Mökki</h3>
+        <p>Finnish interior and cabin magazines. Fisherman's Cabin, built on a remote island at II.</p>
+      </div>
+    </div>
+
+    <div class="strip rv">
+      <p class="lbl" style="margin-bottom:22px">Publications and broadcasters</p>
+      <img src="https://karkitektur.se/wp-content/uploads/2023/04/Featured-1024x206.png" alt="Logotypes of the publications and broadcasters that have featured the studio" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<div class="axis" aria-hidden="true"><i></i></div>
+
+<!-- ═══ STUDIO ═══ -->
+<section class="sec tint" id="studio">
+  <div class="wrap">
+    <div class="sec-top rv"><p class="lbl lbl-fir">05</p><hr class="hz"><p class="lbl">Who we are</p></div>
+
+    <div class="studio">
+      <div class="rv">
+        <div class="studio-img">
+          <img src="https://karkitektur.se/wp-content/uploads/2026/01/generated-image-1-9-1.png" alt="Study model of the souterrain house on its cliff site" loading="lazy">
+        </div>
+        <div class="studio-cap">
+          <span class="lbl">Study model</span>
+          <span class="lbl">Project L</span>
+        </div>
+      </div>
+      <div class="rv">
+        <h2 class="h2" style="margin-bottom:.45em">Marko Koistinen</h2>
+        <p class="lead">Marko Koistinen Architects is an internationally active architecture and design studio led by architect Marko Koistinen, who brings Finnish heritage and training from the Royal Danish Academy of Fine Arts.</p>
+        <p class="body" style="margin-top:1.5em">The studio focuses on contemporary experimental architecture and design, always prioritising high usability and property value for clients and partners.</p>
+        <p class="body">We strongly believe that architecture has a profound connection to its context, landscape and environmental surroundings — and that the best solutions emerge through close, transparent collaboration with clients and partners, brought to life by skilled and talented craftsmen.</p>
+        <p class="body">Our legacy is built on a tradition of innovation and craftsmanship, coupled with a relentless pursuit of perfection.</p>
+        <p style="margin-top:2em"><a class="alink" href="#contact">Start a project</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section class="sec dk" id="contact">
+  <div class="wrap">
+    <div class="sec-top rv"><p class="lbl lbl-fir">06</p><hr class="hz"><p class="lbl lbl-dk">Contact</p></div>
+    <div class="sec-head rv">
+      <h2 class="h2" style="color:var(--paper)">Tell us about the site.</h2>
+      <p class="lead">Marko Koistinen Arkitekter AB · Torsvikssvängen 11, 181 34 Lidingö</p>
+    </div>
+
+    <div class="ct">
+      <div class="rv">
+        <p class="lbl lbl-dk" style="margin-bottom:16px">Write to us</p>
+        <a class="ct-mail" href="mailto:marko@karkitektur.se?subject=Project%20enquiry">marko@karkitektur.se</a>
+        <p style="margin-top:2.2em;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-light" href="https://www.instagram.com/k_arkitektur/" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn btn-light" href="https://www.facebook.com/pg/karkitektur/posts/" target="_blank" rel="noopener">Facebook</a>
+        </p>
+      </div>
+      <div class="rv">
+        <dl>
+          <div class="ct-row"><dt>Telephone</dt><dd><a href="tel:+46704768421">+46 (0)70 476 84 21</a></dd></div>
+          <div class="ct-row"><dt>Studio</dt><dd>Torsvikssvängen 11<br>181 34 Lidingö, Sweden</dd></div>
+          <div class="ct-row"><dt>Open</dt><dd>09:00 — 18:00 (UTC+1)</dd></div>
+        </dl>
+        <div class="legal">
+          Marko Koistinen Arkitekter AB · Org.nr 559301-8269<br>
+          Registered for VAT and F-skatt.<br>
+          Professional indemnity insurance through <a href="http://www.arkitekt.se/" target="_blank" rel="noopener">Sveriges Arkitekter</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-in">
+      <a class="brand" href="#top" aria-label="K Arkitektur"><b>K Arkitektur</b></a>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="#works">Works</a>
+        <a href="#index">Index</a>
+        <a href="#featured">Featured in</a>
+        <a href="#studio">Studio</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.instagram.com/k_arkitektur/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> Marko Koistinen Arkitekter AB</span>
+      <span>Torsvikssvängen 11, 181 34 Lidingö</span>
+      <span>Org.nr 559301-8269</span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ArchitecturalService",
+  "name":"K Arkitektur — Marko Koistinen Architects",
+  "legalName":"Marko Koistinen Arkitekter AB",
+  "url":"https://karkitektur.se/",
+  "description":"Internationally active architecture and design studio on Lidingö, Stockholm, led by architect Marko Koistinen. Custom made living spaces — summerhouses, villas and extensions in Sweden and Finland.",
+  "image":"https://karkitektur.se/wp-content/uploads/2023/04/Utsikt.jpg",
+  "email":"marko@karkitektur.se",
+  "telephone":"+46704768421",
+  "vatID":"559301-8269",
+  "slogan":"We master the art of custom made living spaces",
+  "address":{"@type":"PostalAddress","streetAddress":"Torsvikssvängen 11","postalCode":"181 34","addressLocality":"Lidingö","addressCountry":"SE"},
+  "areaServed":[{"@type":"Country","name":"Sweden"},{"@type":"Country","name":"Finland"}],
+  "openingHours":"Mo-Fr 09:00-18:00",
+  "sameAs":["https://www.instagram.com/k_arkitektur/","https://www.facebook.com/pg/karkitektur/posts/"],
+  "founder":{"@type":"Person","name":"Marko Koistinen","jobTitle":"Architect","alumniOf":"Royal Danish Academy of Fine Arts"}
+}
+</script>
+
+<script>
+(function(){
+  "use strict";
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
+
+  var nav=document.getElementById('nav'), hero=document.getElementById('hero');
+  function navState(){ nav.classList.toggle('solid', window.scrollY > (hero ? hero.offsetHeight-88 : 40)); }
+  navState(); window.addEventListener('scroll', navState, {passive:true}); window.addEventListener('resize', navState);
+
+  var burger=document.getElementById('burger'), mnav=document.getElementById('mnav');
+  function setMenu(open){
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open?'Close menu':'Open menu');
+    mnav.classList.toggle('open', open);
+    document.body.style.overflow = open?'hidden':'';
+    if(open) nav.classList.add('solid'); else navState();
+  }
+  burger.addEventListener('click', function(){ setMenu(burger.getAttribute('aria-expanded')!=='true'); });
+  mnav.addEventListener('click', function(e){ if(e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && mnav.classList.contains('open')) setMenu(false); });
+
+  /* hero sequence */
+  var shots=Array.prototype.slice.call(document.querySelectorAll('.hero .shot'));
+  var ticks=Array.prototype.slice.call(document.querySelectorAll('#ticks .tick'));
+  var cap=document.getElementById('slateCap');
+  var caps=[
+    ["Fisherman's Cabin",'Summerhouse · 30 m² · II, Finland · Built'],
+    ['Project Koistinen','Summerhouse · 85 m² · Gnesta · Built'],
+    ['Villa Glanbäcken','Villa extension · 170 m² · Norrköping'],
+    ['Project L','Summerhouse · 400 m² · Stockholm archipelago']
+  ];
+  var i=0, timer=null;
+  function go(n){
+    shots[i].classList.remove('on');
+    ticks[i].classList.remove('on'); ticks[i].classList.add('done');
+    i=n;
+    if(i===0){ ticks.forEach(function(t){t.classList.remove('done','on');}); }
+    shots[i].classList.add('on');
+    ticks[i].classList.remove('done'); ticks[i].classList.add('on');
+    cap.style.opacity=0;
+    setTimeout(function(){ cap.innerHTML='<b>'+caps[i][0]+'</b>'+caps[i][1]; cap.style.opacity=1; },320);
+  }
+  function start(){ if(!reduce && shots.length>1){ timer=setInterval(function(){ go((i+1)%shots.length); },7000); } }
+  function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+  start();
+  document.addEventListener('visibilitychange', function(){ document.hidden ? stop() : (stop(), start()); });
+
+  /* reveal */
+  var rv=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var sibs=Array.prototype.filter.call(e.target.parentNode.children,function(n){return n.classList&&n.classList.contains('rv');});
+        var k=Math.min(sibs.indexOf(e.target),4);
+        e.target.style.transitionDelay=(k>0?k*80:0)+'ms';
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      });
+    },{rootMargin:'0px 0px -10% 0px',threshold:.04});
+    Array.prototype.forEach.call(rv,function(el){io.observe(el);});
+  } else {
+    Array.prototype.forEach.call(rv,function(el){el.classList.add('in');});
+  }
+
+  /* active nav link */
+  var links=Array.prototype.slice.call(document.querySelectorAll('#navlinks a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));}).filter(Boolean);
+  if('IntersectionObserver' in window && secs.length){
+    var so=new IntersectionObserver(function(en){
+      en.forEach(function(e){
+        if(e.isIntersecting){ links.forEach(function(a){a.classList.toggle('active', a.getAttribute('href')==='#'+e.target.id);}); }
+      });
+    },{rootMargin:'-44% 0px -50% 0px'});
+    secs.forEach(function(s){so.observe(s);});
+  }
+})();
+</script>
+</body>
+</html>
